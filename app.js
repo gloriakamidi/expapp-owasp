@@ -105,8 +105,16 @@ function isLoggedIn(req,res,next) {
         return next();
     }
     res.redirect("/login");
-}
+} 
 
+//Validation
+function validateForm() {
+  let x = document.forms["/login"]["username"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
 
 
 //Listen On Server
